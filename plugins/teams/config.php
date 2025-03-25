@@ -9,7 +9,7 @@ return (object) [
     'url' => 'https://altumco.de/teams-plugin',
     'author' => 'AltumCode',
     'author_url' => 'https://altumcode.com/',
-    'status' => 'inexistent',
+    'status' => 'uninstalled',
     'actions'=> true,
     'avatar_style' => 'background: #283048; background: -webkit-linear-gradient(to bottom, #859398, #283048); background: linear-gradient(to bottom, #859398, #283048);',
     'icon' => '👨‍💻',
