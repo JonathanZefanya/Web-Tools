@@ -523,44 +523,6 @@
 <?php endif ?>
 
 
-<?php if(settings()->tools->is_enabled && $data->enabled_tools): ?>
-    <div class="py-3"></div>
-
-    <div class="container mt-8">
-        <h2 class="text-center mb-3"><?= sprintf(l('index.tools.header'), nr($data->enabled_tools)) ?> <i class="fas fa-fw fa-xs fa-screwdriver-wrench text-muted ml-1"></i></h2>
-
-        <p class="text-muted text-center mb-4"><?= l('index.tools.subheader') ?></p>
-
-        <div class="row position-relative">
-            <div class="index-fade"></div>
-
-            <?php foreach($data->tools_categories as $tool => $tool_properties): ?>
-                <div class="col-12 col-lg-6 p-3 position-relative">
-                    <div class="card"  style="background: <?= $tool_properties['color'] ?>; border-color: <?= $tool_properties['color'] ?>; color: white;">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex text-truncate">
-                                    <div class="d-flex align-items-center justify-content-center rounded mr-3 tool-icon" style="background: <?= $tool_properties['faded_color'] ?>;">
-                                        <i class="<?= $tool_properties['icon'] ?> fa-fw" style="color: <?= $tool_properties['color'] ?>"></i>
-                                    </div>
-
-                                    <div class="text-truncate ml-3">
-                                        <a href="<?= url('tools') ?>" class="stretched-link text-decoration-none" style="color: white;">
-                                            <strong><?= l('tools.' . $tool) ?></strong>
-                                        </a>
-                                        <p class="text-truncate small m-0"><?= l('tools.' . $tool . '_help') ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach ?>
-        </div>
-    </div>
-<?php endif ?>
-
-
 <?php if(\Altum\Plugin::is_active('aix') && settings()->aix->images_is_enabled && settings()->aix->images_display_latest_on_index): ?>
     <div class="py-3"></div>
 
@@ -603,7 +565,7 @@
         <div class="py-7 bg-primary-100 rounded-2x">
             <div class="container">
                 <div class="text-center">
-                    <h2><?= l('index.testimonials.header') ?> <i class="fas fa-fw fa-xs fa-check-circle text-success"></i></h2>
+                    <h2><?= l('index.developer.header') ?> <i class="fas fa-fw fa-xs fa-check-circle text-success"></i></h2>
                 </div>
 
                 <div class="row mt-8">
@@ -611,16 +573,16 @@
                         <div class="col-12 col-lg-4 mb-6 mb-lg-0" data-aos="fade-up" data-aos-delay="<?= $key * 100 ?>">
                             <div class="card border-0 zoom-animation-subtle">
                                 <div class="card-body">
-                                    <img src="<?= ASSETS_FULL_URL . 'images/index/testimonial-' . $value . '.jpeg' ?>" class="img-fluid index-testimonial-avatar" alt="<?= l('index.testimonials.' . $value . '.name') . ', ' . l('index.testimonials.' . $value . '.attribute') ?>" loading="lazy" />
+                                    <img src="<?= ASSETS_FULL_URL . 'images/index/testimonial-' . $value . '.jpg' ?>" class="img-fluid index-testimonial-avatar" alt="<?= l('index.developer.' . $value . '.name') . ', ' . l('index.developer.' . $value . '.attribute') ?>" loading="lazy" />
 
                                     <p class="mt-5">
                                         <span class="text-gray-800 font-weight-bold text-muted h5">“</span>
-                                        <span><?= l('index.testimonials.' . $value . '.text') ?></span>
+                                        <span><?= l('index.developer.' . $value . '.text') ?></span>
                                         <span class="text-gray-800 font-weight-bold text-muted h5">”</span>
                                     </p>
 
                                     <div class="blockquote-footer mt-4">
-                                        <span class="font-weight-bold"><?= l('index.testimonials.' . $value . '.name') ?></span>, <span class="text-muted"><?= l('index.testimonials.' . $value . '.attribute') ?></span>
+                                        <span class="font-weight-bold"><?= l('index.developer.' . $value . '.name') ?></span>, <span class="text-muted"><?= l('index.developer.' . $value . '.attribute') ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -630,71 +592,6 @@
             </div>
         </div>
     </div>
-<?php endif ?>
-
-<?php if(settings()->main->display_index_plans): ?>
-    <div class="py-3"></div>
-
-    <div class="container mt-8">
-        <div class="text-center mb-5">
-            <h2><?= l('index.pricing.header') ?></h2>
-            <p class="text-muted"><?= l('index.pricing.subheader') ?></p>
-        </div>
-
-        <?= $this->views['plans'] ?>
-    </div>
-<?php endif ?>
-
-<?php if(settings()->main->display_index_faq): ?>
-    <div class="py-3"></div>
-
-    <div class="container mt-8">
-        <div class="text-center mb-5">
-            <h2><?= sprintf(l('index.faq.header'), '<span class="text-primary">', '</span>') ?></h2>
-        </div>
-
-        <div class="accordion index-faq" id="faq_accordion">
-            <?php foreach(['one', 'two', 'three', 'four'] as $key): ?>
-                <div class="card index-highly-rounded">
-                    <div class="card-body">
-                        <div class="" id="<?= 'faq_accordion_' . $key ?>">
-                            <h3 class="mb-0">
-                                <button class="btn btn-lg font-weight-bold btn-block d-flex justify-content-between text-gray-800 px-0 icon-zoom-animation" type="button" data-toggle="collapse" data-target="<?= '#faq_accordion_answer_' . $key ?>" aria-expanded="true" aria-controls="<?= 'faq_accordion_answer_' . $key ?>">
-                                    <span><?= l('index.faq.' . $key . '.question') ?></span>
-
-                                    <span data-icon>
-                                        <i class="fas fa-fw fa-circle-chevron-down"></i>
-                                    </span>
-                                </button>
-                            </h3>
-                        </div>
-
-                        <div id="<?= 'faq_accordion_answer_' . $key ?>" class="collapse text-muted mt-3" aria-labelledby="<?= 'faq_accordion_' . $key ?>" data-parent="#faq_accordion">
-                            <?= l('index.faq.' . $key . '.answer') ?>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach ?>
-        </div>
-    </div>
-
-    <?php ob_start() ?>
-    <script>
-        'use strict';
-
-        $('#faq_accordion').on('show.bs.collapse', event => {
-            let svg = event.target.parentElement.querySelector('[data-icon] svg')
-            svg.style.transform = 'rotate(180deg)';
-            svg.style.color = 'var(--primary)';
-        })
-
-        $('#faq_accordion').on('hide.bs.collapse', event => {
-            let svg = event.target.parentElement.querySelector('[data-icon] svg')
-            svg.style.color = 'var(--primary-800)';
-            svg.style.removeProperty('transform');
-        })
-    </script>
-    <?php \Altum\Event::add_content(ob_get_clean(), 'javascript') ?>
 <?php endif ?>
 
 <?php if(settings()->users->register_is_enabled): ?>

@@ -4,5 +4,5 @@
 define('DATABASE_SERVER',   'localhost');
 define('DATABASE_USERNAME', 'root');
 define('DATABASE_PASSWORD', 'root');
-define('DATABASE_NAME',     'kampus_qr-code');
-define('SITE_URL',          'http://localhost/project-website/Web%20Tools/');
+define('DATABASE_NAME',     'web-tools');
+define('SITE_URL',          'http://localhost/Latihan-Web/Web-Tools/');
