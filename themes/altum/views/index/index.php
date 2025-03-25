@@ -594,6 +594,71 @@
     </div>
 <?php endif ?>
 
+<?php if(settings()->main->display_index_plans): ?>
+    <div class="py-3"></div>
+
+    <div class="container mt-8">
+        <div class="text-center mb-5">
+            <h2><?= l('index.pricing.header') ?></h2>
+            <p class="text-muted"><?= l('index.pricing.subheader') ?></p>
+        </div>
+
+        <?= $this->views['plans'] ?>
+    </div>
+<?php endif ?>
+
+<?php if(settings()->main->display_index_faq): ?>
+    <div class="py-3"></div>
+
+    <div class="container mt-8">
+        <div class="text-center mb-5">
+            <h2><?= sprintf(l('index.faq.header'), '<span class="text-primary">', '</span>') ?></h2>
+        </div>
+
+        <div class="accordion index-faq" id="faq_accordion">
+            <?php foreach(['one', 'two', 'three', 'four'] as $key): ?>
+                <div class="card index-highly-rounded">
+                    <div class="card-body">
+                        <div class="" id="<?= 'faq_accordion_' . $key ?>">
+                            <h3 class="mb-0">
+                                <button class="btn btn-lg font-weight-bold btn-block d-flex justify-content-between text-gray-800 px-0 icon-zoom-animation" type="button" data-toggle="collapse" data-target="<?= '#faq_accordion_answer_' . $key ?>" aria-expanded="true" aria-controls="<?= 'faq_accordion_answer_' . $key ?>">
+                                    <span><?= l('index.faq.' . $key . '.question') ?></span>
+
+                                    <span data-icon>
+                                        <i class="fas fa-fw fa-circle-chevron-down"></i>
+                                    </span>
+                                </button>
+                            </h3>
+                        </div>
+
+                        <div id="<?= 'faq_accordion_answer_' . $key ?>" class="collapse text-muted mt-3" aria-labelledby="<?= 'faq_accordion_' . $key ?>" data-parent="#faq_accordion">
+                            <?= l('index.faq.' . $key . '.answer') ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        </div>
+    </div>
+
+    <?php ob_start() ?>
+    <script>
+        'use strict';
+
+        $('#faq_accordion').on('show.bs.collapse', event => {
+            let svg = event.target.parentElement.querySelector('[data-icon] svg')
+            svg.style.transform = 'rotate(180deg)';
+            svg.style.color = 'var(--primary)';
+        })
+
+        $('#faq_accordion').on('hide.bs.collapse', event => {
+            let svg = event.target.parentElement.querySelector('[data-icon] svg')
+            svg.style.color = 'var(--primary-800)';
+            svg.style.removeProperty('transform');
+        })
+    </script>
+    <?php \Altum\Event::add_content(ob_get_clean(), 'javascript') ?>
+<?php endif ?>
+
 <?php if(settings()->users->register_is_enabled): ?>
     <div class="py-3"></div>
 

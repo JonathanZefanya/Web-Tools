@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://localhost/project-website/Web%20Tools/sitemap
+Sitemap: http://localhost/Latihan-Web/Web-Tools/sitemap
