@@ -4,7 +4,7 @@
     <div class="mb-3 mb-lg-0">
         <div class="mb-2"><?= sprintf(l('global.footer.copyright'), date('Y'), settings()->main->title) ?></div>
 
-        <div>Powered by <img src="https://if.iti.ac.id/wp-content/uploads/2023/08/Logo-ITI-oke-3.png" class="icon-favicon" alt="logo" /> <a href="https://if.iti.ac.id/" target="_blank">IF - ITI</a>.</div>
+        <div>Powered by <img src="https://w7.pngwing.com/pngs/616/551/png-transparent-christmas-anime-desktop-shakugan-no-shana-4k-resolution-anime-manga-computer-wallpaper-fictional-character-thumbnail.png" class="icon-favicon" alt="logo" /> <a href="https://xead.my.id/" target="_blank">Jonathan Zefanya</a>.</div>
     </div>
 
     <div class="d-flex flex-column flex-lg-row">

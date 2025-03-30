@@ -1086,7 +1086,7 @@ return [
     'register.error_message.email_exists' => 'This email address is already in use.',
     'register.error_message.blacklisted_domain' => 'This email domain has been blacklisted.',
     'register.error_message.blacklisted_country' => 'Your country has been blacklisted.',
-    'register.success_message.registration' => 'Check your email for the activation link of your account.',
+    'register.success_message.registration' => 'Check your email for the activation link of your account. (don\'t forget to check your spam folder)',
     'register.success_message.login' => 'Welcome to our platform, we are grateful to have you here.',
 
 
@@ -1104,10 +1104,10 @@ return [
 
     'index.breadcrumb' => 'Home',
     'index.menu' => 'Home',
-    'index.title' => 'Your all-in-one social tool',
-    'index.meta_description' => '',
-    'index.meta_keywords' => '',
-    'index.header' => 'Do everything with one platform.',
+    'index.title' => 'More Tools at one place',
+    'index.meta_description' => 'Create short links, bio pages, QR codes, vCards, file links and host static HTML sites with ease.',
+    'index.meta_keywords' => 'short links, bio pages, QR codes, vCards, file links, static HTML sites',
+    'index.header' => 'Everything on one platform.',
     'index.subheader' => '🔗 Short links &nbsp;&nbsp;&nbsp; 📱 Bio pages &nbsp;&nbsp;&nbsp; 🤳 QR codes &nbsp;&nbsp;&nbsp; 👤 Share Vcards &nbsp;&nbsp;&nbsp; 📃 Transfer files &nbsp;&nbsp;&nbsp; 🧑‍💻 Host HTML Sites',
     'index.sign_up' => 'Get Started',
     'index.example' => 'Bio page Demo',

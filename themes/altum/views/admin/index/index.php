@@ -457,11 +457,11 @@
             <div class="card-body text-truncate">
                 <small class="text-muted"><i class="fas fa-fw fa-sm fa-globe mr-1"></i> Official website</small>
 
-                <div class="mt-2"><span class="h6">if.iti.ac.id</span></div>
+                <div class="mt-2"><span class="h6">xead.my.id</span></div>
             </div>
 
             <div class="pr-4 d-flex flex-column justify-content-center">
-                <a href="https://if.iti.ac.id" class="stretched-link" target="_blank">
+                <a href="https://xead.my.id" class="stretched-link" target="_blank">
                     <i class="fas fa-fw fa-angle-right text-gray-500"></i>
                 </a>
             </div>
@@ -473,11 +473,11 @@
             <div class="card-body text-truncate">
                 <small class="text-muted"><i class="fas fa-fw fa-sm fa-envelope mr-1"></i> Get support</small>
 
-                <div class="mt-2"><span class="h6">prodi.if@iti.ac.id</span></div>
+                <div class="mt-2"><span class="h6">Zyrex</span></div>
             </div>
 
             <div class="pr-4 d-flex flex-column justify-content-center">
-                <a href="https://if.iti.ac.id/kontak/" class="stretched-link" target="_blank">
+                <a href="https://zyrex.win/" class="stretched-link" target="_blank">
                     <i class="fas fa-fw fa-angle-right text-gray-500"></i>
                 </a>
             </div>
